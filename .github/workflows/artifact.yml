@@ -24,10 +24,10 @@ jobs:
     needs: build
     steps:
       - name: download text file
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v2
         with:
           name: hello-artifact
-          path: ./artifacts
+          path: ./artifacts/hello.txt
       
       - name: print hello.txt file
         run: cat ./artifacts/hello.txt
